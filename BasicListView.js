@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {ListView,StyleSheet,Text,View} from 'react-native';
+import {ListView,StyleSheet} from 'react-native';
 import Row from './Row'
 
 class ListDemoList extends Component {
@@ -13,7 +13,10 @@ constructor(props) {
 
   const ds = new ListView.DataSource({rowHasChanged:(r1,r2) => r1 !== r2});
   this.state = {
-    myList: ds.cloneWithRows([{name:'Ankit'},{name:'Ankur'},{name:'Tikku'}])
+    myList: ds.cloneWithRows([
+    {name:'Ankit',profession:'iOS Developer'},
+    {name:'Ankur',profession:'React Developer'},
+    {name:'Tikku',profession:'Android Developer'}])
   }
 }
 
